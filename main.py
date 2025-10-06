@@ -1,9 +1,8 @@
 import googlemaps
 from datetime import datetime
 from itertools import permutations
-import os
 
-API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+API_KEY = "AIzaSyDGNlmY5bl73Z7drBwPYWSX98RJjI_Wl2o"
 map_client = googlemaps.Client(key=API_KEY)
 get_duration_cache = {}
 
@@ -33,10 +32,21 @@ def calculate_shortest_travel(origin, desinations):
     # Try all possible options of destinations
     for order in permutations(destinations):
         route = [origin] + list(order)
+        print("the route: ", route)
         total = 0
 
-        for i in range(len(route) - 1): #calculating time for each permutation
-            total += get_duration(route[i], route[i + 1])
+        for i in range(len(route) - 1):  # calculating time for each permutation
+            key = (route[i], route[i + 1])  # tuple for dictionary lookup
+
+            if key in get_duration_cache:  # reuse stored duration
+                duration = get_duration_cache[key]
+            else:
+                duration = get_duration(route[i], route[i + 1])
+                get_duration_cache[key] = duration  # store in dict for future use
+                reverse_key = (route[i + 1], route[i]) #reverse duration
+                if reverse_key not in get_duration_cache:
+                    get_duration_cache[reverse_key] = duration
+            total += duration
 
         if total < shortest_time: #check which option is quickest
             shortest_time = total
