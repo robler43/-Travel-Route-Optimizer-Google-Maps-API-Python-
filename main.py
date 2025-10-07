@@ -2,7 +2,7 @@ import googlemaps
 from datetime import datetime
 from itertools import permutations
 
-API_KEY = "AIzaSyDGNlmY5bl73Z7drBwPYWSX98RJjI_Wl2o"
+API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 map_client = googlemaps.Client(key=API_KEY)
 get_duration_cache = {}
 
