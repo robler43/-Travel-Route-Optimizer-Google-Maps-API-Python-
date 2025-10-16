@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚗 Route Optimizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxg3AjNaxp0-8i_ICPFqDYcc-FCxxf-Mk&libraries=places"></script>
+  
+</head>
+<body>
+    <div class="container">
+        <div class="card z-depth-3" style="padding: 20px; margin-top: 30px;">
+          <h1 class="center-align">🚗 Route Optimizer.io</h1>
+      
+          <!-- Origin -->
+          <div class="input-field">
+            <input id="origin" type="text">
+            <label for="origin">Origin</label>
+          </div>
+      
+          <!-- Destinations container -->
+          <div id="destinations-container">
+            <div class="input-field" style="margin-bottom: 20px;">
+              <input type="text" class="destination">
+              <label>Destination</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" id="add-destination-btn">Add Destination</button>
+      
+          <br><br>
+          <button class="btn-large blue darken-2 waves-effect waves-light" id="calculate-btn">Calculate Route</button>
+      
+          <div id="loading" style="display:none; margin-top:10px;">
+            <p>⏳ Calculating best route...</p>
+          </div>
+      
+          <div id="result" style="margin-top: 20px;"></div>
+        </div>
+      </div>
+      
+      <!-- Map -->
+      <div class="container" style="margin-top: 20px;">
+        <div id="map" style="height: 500px;"></div>
+      </div>
+      
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
