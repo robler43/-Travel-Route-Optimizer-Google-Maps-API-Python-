@@ -4,8 +4,7 @@ from datetime import datetime
 from itertools import permutations
 
 app = Flask(__name__)
-"""API_KEY = "AIzaSyDGNlmY5bl73Z7drBwPYWSX98RJjI_Wl2o" """
-API_KEY = "AIzaSyDxg3AjNaxp0-8i_ICPFqDYcc-FCxxf-Mk"
+API_KEY = "API_KEY"
 map_client = googlemaps.Client(key=API_KEY)
 get_duration_cache = {}
 
