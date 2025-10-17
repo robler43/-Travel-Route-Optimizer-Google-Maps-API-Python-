@@ -9,21 +9,6 @@ API_KEY = "AIzaSyDxg3AjNaxp0-8i_ICPFqDYcc-FCxxf-Mk"
 map_client = googlemaps.Client(key=API_KEY)
 get_duration_cache = {}
 
-mock_times = {
-    ("Texas Tech University, Lubbock, TX", "Dallas, TX"): 5,
-    ("Texas Tech University, Lubbock, TX", "Austin, TX"): 6,
-    ("Texas Tech University, Lubbock, TX", "Houston, TX"): 7,
-    ("Dallas, TX", "Austin, TX"): 3,
-    ("Dallas, TX", "Houston, TX"): 4,
-    ("Austin, TX", "Houston, TX"): 2,
-}
-
-def get_duration(origin, destination):
-    key = (origin, destination)
-    if key in mock_times:
-        return mock_times[key]
-    return 1  # default
-
 def get_duration(origin, destination):
     print(f"Getting duration from {origin} → {destination}")
 
