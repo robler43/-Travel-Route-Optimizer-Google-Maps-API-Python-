@@ -21,7 +21,7 @@ This project uses the **Google Maps Directions API** with Python to calculate an
 
 ## ⚙️ Setup
 1. Get a Google Maps API Key from Google Cloud Console.
-2. Replace the API_KEY in main.py with your own key:
+2. Replace the API_KEY in app.py with your own key:
 
 ---
 
@@ -39,7 +39,4 @@ Total Travel Time: 8.76 hours
 ---
 
 ## 🚀 Future Improvements
-- Integrate Google Distance Matrix API for faster performance.
-- Implement dynamic programming (Held-Karp algorithm) for better scalability (TSP optimization).
-- Add a map visualization of the best route.
-
+- Design & Apply a responsive UI with customer centered experience
