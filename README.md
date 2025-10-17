@@ -2,7 +2,8 @@
 
 A Python application designed to calculate and optimize the shortest driving route between multiple destinations, utilizing real-time traffic data from the Google Maps Directions API. This tool guarantees the optimal route by evaluating all possible permutations.
 
-# **DEMO [![Watch Demo here]]([https://www.loom.com/share/4fcccbc42808409391e026f1f02aff31?sid=57a50d16-805f-4561-b476-9c26ad6ec90e])
+[![Watch the video](<img width="920" height="849" alt="demo" src="https://github.com/user-attachments/assets/9da97e38-5231-4908-9d1d-e1e9b11ba6e0" />
+ )](https://www.loom.com/share/4fcccbc42808409391e026f1f02aff31?sid=275cbb1f-42f9-4f69-acc6-2426b075e3ae)
 
 ## **📌 Features**
 
